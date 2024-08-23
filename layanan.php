@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/all.js"></script>
     <script src="https://kit.fontawesome.com/8e23404ed8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container">
-                <img src="image/callcenter.png" width="100px" height="100px" alt="">
-                <h1 class="navbar-brand">Layanan</h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="layanan.html">Macam Layanan</a>
-              <a class="nav-link" href="berita.html">Berita</a>
-              <a class="nav-link" href="kritik.html">Infformasi Publik</a>
+
+<body class="font-poppins">
+    <?php require 'components/header.php' ?>
+
+    <div class="container mx-auto mt-8">
+        <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Laman Layanan Dinas Komunikasi dan Informasi
+            Kabupaten Blitar</h1>
+
+        <nav class="mb-4">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3 text-gray-700">
+                <li class="inline-flex items-center">
+                    <a href="home.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                </li>
+                <li class="inline-flex items-center">
+                    <span class="mx-2 text-gray-500">></span>
+                    <span>Layanan</span>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+            <div class="relative">
+                <!-- Button trigger -->
+                <button data-popover-target="popover-layanan-pemerintah" data-popover-trigger="click" type="button" data-popover-placement="bottom"
+                    class="text-gray-700 hover:text-gray-900 text-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg">
+                    <img src="image/layanan-pemerintah.png" alt="Layanan Pemerintah" class="mx-auto mb-4 w-20 h-20">
+                    Layanan Pemerintah
+                </button>
+
+                <!-- Popover content -->
+                <div data-popover id="popover-layanan-pemerintah" role="tooltip" data-popper-placement="bottom"
+                    class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                    <div
+                        class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Layanan Pemerintah</h3>
+                    </div>
+                    <div class="px-3 py-2">
+                        <p>Informasi tentang layanan yang disediakan oleh pemerintah. Klik untuk detail lebih lanjut.
+                        </p>
+                    </div>
+                    <div data-popper-arrow></div>
+                </div>
             </div>
-          </div>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success me-2" style="width: 20%; " type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
-          </form><a href="home.html">
-                <button type="button" class="btn btn-success me-5">Login</button>
-              </a>
+            <div class="relative">
+                <!-- Button trigger -->
+                <button data-popover-target="popover-layanan-non-pemerintah" data-popover-trigger="click" type="button" data-popover-placement="bottom"
+                    class="text-gray-700 hover:text-gray-900 text-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg">
+                    <img src="image/layanan-non-pemerintah.png" alt="Layanan Pemerintah" class="mx-auto mb-4 w-20 h-20">
+                    Layanan Non Pemerintah
+                </button>
+
+                <!-- Popover content -->
+                <div data-popover id="popover-layanan-non-pemerintah" role="tooltip"
+                    class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                    <div
+                        class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Layanan Non Pemerintah</h3>
+                    </div>
+                    <div class="px-3 py-2">
+                        <p>Informasi tentang layanan yang disediakan oleh pemerintah. Klik untuk detail lebih lanjut.
+                        </p>
+                    </div>
+                    <div data-popper-arrow></div>
+                </div>
             </div>
-          </nav>
-      </header>
-      <br>
-    <div class="container">
-        <h1 class="home-tag" style="text-align: start; ">Laman Layanan Dinas Komunikasi dan Informasi Kabupaten Blitar</h1>
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Layanan</li>
-          </ol>
-            </div> 
-        </nav>>
-    </nav>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <h4 style="text-align: start;">Laman Layanan</h4>
-          <h5 style="text-align: start;">Pilih Layanan</h5>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Layanan Pemerintah</p></a>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Layanan Non Pemerintah</p></a>
-          
-          <h4 style="text-align: start;">Berita:</h4>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Berita Penting</p></a>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Berita Terkini</p></a>
-        
-          
-          <h4 style="text-align: start;">Informasi Publik:</h4>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>PPID KemKominfo</p></a>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Reformasi Birokrasi</p></a>
-          <a href="" style="text-decoration: none; color: rgb(104, 104, 104);"><p>Dumas Kominfo</p></a>
         </div>
-    </header>
 </body>
+
+</html>
